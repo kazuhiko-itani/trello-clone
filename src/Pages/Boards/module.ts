@@ -41,7 +41,7 @@ export default function reducer(
       return {
         ...state,
         boards: [
-          ...initialState.boards,
+          ...state.boards,
           {
             id: nextId,
             name: action.payload.name,
