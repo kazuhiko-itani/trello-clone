@@ -1,6 +1,6 @@
 import Boards, {
   BoardsState,
-  CreateAction as BoardsActions,
+  AddAction as BoardsActions,
 } from './Pages/Boards/module';
 import { createStore, combineReducers, Action, applyMiddleware } from 'redux';
 import { routerMiddleware, connectRouter } from 'connected-react-router';

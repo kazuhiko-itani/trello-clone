@@ -1,7 +1,7 @@
 import { Boards } from './Boards';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import { create } from './module';
+import { add } from './module';
 import { ReduxAction, ReduxState } from '../../store';
 
 export class ActionDispatcher {
@@ -10,7 +10,7 @@ export class ActionDispatcher {
   }
 
   public createBoard(boardName: string) {
-    this.dispatch(create(boardName));
+    this.dispatch(add(boardName));
   }
 }
 

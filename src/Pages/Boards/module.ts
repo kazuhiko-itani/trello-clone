@@ -1,18 +1,18 @@
 import { Action } from 'redux';
 
 export enum ActionNames {
-  CREATE = 'boards/create',
+  ADD = 'boards/add',
 }
 
-export interface CreateAction extends Action {
-  type: ActionNames.CREATE;
+export interface AddAction extends Action {
+  type: ActionNames.ADD;
   payload: {
     name: string;
   };
 }
 
-export const create = (name: string): CreateAction => ({
-  type: ActionNames.CREATE,
+export const add = (name: string): AddAction => ({
+  type: ActionNames.ADD,
   payload: {
     name,
   },
@@ -33,10 +33,10 @@ export const initialState: BoardsState = {
 
 export default function reducer(
   state: BoardsState = initialState,
-  action: CreateAction,
+  action: AddAction,
 ): BoardsState {
   switch (action.type) {
-    case ActionNames.CREATE:
+    case ActionNames.ADD:
       const nextId = initialState.boards.length + 1;
       return {
         ...state,
